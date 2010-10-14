@@ -41,7 +41,7 @@ class CoffeeKup
           code = @unwrap(template)
         when 'string'
           if coffee?
-            code = coffee.compile String(template), {'noWrap'}
+            code = coffee.compile String(template), bare: on
           else
             code = @unwrap(template)
         else code = ''
